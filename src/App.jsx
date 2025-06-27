@@ -7,6 +7,7 @@ import Skills from './sections/Skills/Skills';
 import Loader from './components/Loader';
 import BackToTop from './components/BackToTop';
 import { useState, useEffect } from 'react';
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
