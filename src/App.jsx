@@ -27,6 +27,7 @@ function App() {
         <Footer />
       </div>
       <BackToTop />
+       <Analytics />
     </>
   );
 }
