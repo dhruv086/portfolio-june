@@ -6,6 +6,7 @@
   text-align: center;
   height: 100dvh;
   min-height: 500px;
+  position: relative;
 
   .hero {
     max-width: 200px;
@@ -79,6 +80,59 @@
   gap: 20px;
   align-items: center;
   text-align: center;
+}
+
+.scrollIndicator {
+  position: absolute;
+  left: 50%;
+  bottom: 40px;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  z-index: 10;
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+.scrollIndicatorHidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(128, 128, 128, 0.08);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.5;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: opacity 0.3s;
+}
+
+.circle svg {
+  color: gray;
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+
+@media (max-width: 800px) {
+  .scrollIndicator {
+    bottom: 20px;
+  }
+  .circle {
+    width: 36px;
+    height: 36px;
+  }
+  .circle svg {
+    width: 24px;
+    height: 24px;
+  }
 }
 
 @media (width >= 800px) {
